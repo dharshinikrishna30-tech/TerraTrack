@@ -1,0 +1,30 @@
+{
+  "name": "ecopulse-monorepo",
+  "version": "1.0.0",
+  "description": "EcoPulse – Track. Measure. Reduce. Environmental Sustainability SaaS Platform",
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,green\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "start": "npm start --prefix server",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "build": "npm run build --prefix client",
+    "test": "npm test --prefix server",
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "sustainability",
+    "carbon-accounting",
+    "esg",
+    "green-tech",
+    "react",
+    "express",
+    "mongodb",
+    "vite",
+    "tailwind"
+  ],
+  "author": "EcoPulse Team",
+  "license": "MIT"
+}
