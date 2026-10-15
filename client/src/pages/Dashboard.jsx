@@ -57,20 +57,28 @@ export const Dashboard = () => {
 
   const fetchDashboardData = async () => {
     try {
-      const [summaryRes, logsRes, goalsRes, advisorRes] = await Promise.all([
+      const results = await Promise.allSettled([
         resourceService.getSummary(),
         resourceService.getLogs({ limit: 5 }),
         goalService.getGoals(),
         advisorService.getRecommendations(),
       ]);
 
-      setSummary(summaryRes.data.summary);
-      setRecentLogs(logsRes.data.logs || []);
-      setGoals(goalsRes.data.goals || []);
-      const recs = advisorRes.data.data?.recommendations || [];
-      setTopRecommendation(recs[0] || null);
+      if (results[0].status === 'fulfilled') {
+        setSummary(results[0].value.data.summary);
+      }
+      if (results[1].status === 'fulfilled') {
+        setRecentLogs(results[1].value.data.logs || []);
+      }
+      if (results[2].status === 'fulfilled') {
+        setGoals(results[2].value.data.goals || []);
+      }
+      if (results[3].status === 'fulfilled') {
+        const recs = results[3].value.data?.data?.recommendations || [];
+        setTopRecommendation(recs[0] || null);
+      }
     } catch (err) {
-      toast('Failed to update dashboard data', 'error');
+      console.error('Dashboard load issue:', err);
     } finally {
       setLoading(false);
       setRefreshing(false);

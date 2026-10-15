@@ -25,7 +25,11 @@ api.interceptors.response.use(
   (error) => {
     if (error.response && error.response.status === 401) {
       // If unauthorized, clear invalid token if not already on login/landing
-      if (!window.location.pathname.startsWith('/login') && window.location.pathname !== '/') {
+      if (
+        !window.location.pathname.startsWith('/login') &&
+        !window.location.pathname.startsWith('/register') &&
+        window.location.pathname !== '/'
+      ) {
         localStorage.removeItem('ecopulse_token');
         localStorage.removeItem('ecopulse_user');
         window.location.href = '/login?expired=true';
