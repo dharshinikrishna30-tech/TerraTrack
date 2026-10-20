@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema(
     },
     organization: {
       type: String,
-      default: 'EcoPulse Enterprise',
+      default: 'TerraTrack Enterprise',
       trim: true,
     },
     role: {

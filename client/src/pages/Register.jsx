@@ -53,7 +53,7 @@ export const Register = () => {
     setDemoLoading(true);
     try {
       await demoLogin();
-      toast('Welcome to the pre-loaded EcoPulse demo account!', 'success');
+      toast('Welcome to the pre-loaded TerraTrack demo account!', 'success');
       navigate('/app/dashboard');
     } catch (err) {
       toast('Failed to load demo account. Please try again.', 'error');

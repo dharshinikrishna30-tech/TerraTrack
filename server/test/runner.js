@@ -22,7 +22,7 @@ const runTest = async (title, fn) => {
 
 async function executeTests() {
   console.log('\n=============================================');
-  console.log('🧪 Running EcoPulse Automated Test Suite');
+  console.log('🧪 Running TerraTrack Automated Test Suite');
   console.log('=============================================\n');
 
   try {
@@ -68,7 +68,7 @@ async function executeTests() {
       const res = await request(app).post('/api/auth/demo-login');
       assert.strictEqual(res.status, 200);
       assert.ok(res.body.token);
-      assert.strictEqual(res.body.user.email, 'sustainability.demo@ecopulse.io');
+      assert.strictEqual(res.body.user.email, 'sustainability.demo@TerraTrack.io');
       demoToken = res.body.token;
     });
 

@@ -1,8 +1,8 @@
-# 🌿 EcoPulse – Track. Measure. Reduce.
+# 🌿 TerraTrack – Track. Measure. Reduce.
 
 > **Next-Generation Corporate Environmental Sustainability & Carbon Accounting SaaS Platform**
 
-EcoPulse is a production-quality, full-stack MERN application engineered to help modern enterprises, campuses, and organizations monitor resource consumption, calculate accurate greenhouse gas (GHG) Scope 1, 2, and 3 emissions, track science-based decarbonization targets, and discover high-ROI operational efficiencies through an AI Sustainability Advisor.
+TerraTrack is a production-quality, full-stack MERN application engineered to help modern enterprises, campuses, and organizations monitor resource consumption, calculate accurate greenhouse gas (GHG) Scope 1, 2, and 3 emissions, track science-based decarbonization targets, and discover high-ROI operational efficiencies through an AI Sustainability Advisor.
 
 ---
 
@@ -68,8 +68,8 @@ EcoPulse is a production-quality, full-stack MERN application engineered to help
 ### 1. Clone & Install Dependencies
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/ecopulse.git
-cd ecopulse
+git clone https://github.com/your-username/TerraTrack.git
+cd TerraTrack
 
 # Install root, server, and client dependencies
 npm run install-all
@@ -86,10 +86,10 @@ cp server/.env.example server/.env
 | `PORT` | Backend server port | `5000` |
 | `NODE_ENV` | Environment mode | `development` |
 | `MONGODB_URI` | MongoDB Connection URI | Leave blank for auto in-memory MongoDB |
-| `JWT_SECRET` | Secret key for JWT signing | `ecopulse_jwt_secret_dev_2026` |
+| `JWT_SECRET` | Secret key for JWT signing | `TerraTrack_jwt_secret_dev_2026` |
 | `GEMINI_API_KEY` | Optional Google Gemini API key | Blank (uses rule-based engine fallback) |
 
-> 💡 **Zero Setup Note**: You do **not** need to install or run MongoDB locally! If `MONGODB_URI` is left blank, EcoPulse automatically starts an in-memory database instance.
+> 💡 **Zero Setup Note**: You do **not** need to install or run MongoDB locally! If `MONGODB_URI` is left blank, TerraTrack automatically starts an in-memory database instance.
 
 ### 3. Run Development Servers
 From the root directory, run both frontend and backend concurrently:
@@ -105,7 +105,7 @@ npm run dev
 
 ## 🧪 Automated Testing
 
-EcoPulse includes an automated test suite verifying GHG Protocol calculation formulas, unit normalization, JWT authentication, demo login, resource creation, and CSV export.
+TerraTrack includes an automated test suite verifying GHG Protocol calculation formulas, unit normalization, JWT authentication, demo login, resource creation, and CSV export.
 
 Run the test suite:
 ```bash
@@ -117,7 +117,7 @@ npm test
 ## 🌐 Deployment Instructions
 
 ### Deploy to Vercel (Frontend & Serverless)
-EcoPulse includes a pre-configured `vercel.json`:
+TerraTrack includes a pre-configured `vercel.json`:
 1. Push your repository to GitHub.
 2. Import the project into [Vercel](https://vercel.com).
 3. Set the Root Directory to `client` or root with `vercel.json` rewrites.

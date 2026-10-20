@@ -49,7 +49,7 @@ const authLimiter = rateLimit({
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'ok',
-    app: 'EcoPulse API',
+    app: 'TerraTrack API',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
   });

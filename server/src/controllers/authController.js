@@ -3,7 +3,7 @@ import User from '../models/User.js';
 import { seedUserData } from '../utils/seedData.js';
 
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET || 'ecopulse_jwt_secret_dev_2026', {
+  return jwt.sign({ id }, process.env.JWT_SECRET || 'TerraTrack_jwt_secret_dev_2026', {
     expiresIn: '30d',
   });
 };
@@ -103,14 +103,14 @@ export const login = async (req, res, next) => {
  */
 export const demoLogin = async (req, res, next) => {
   try {
-    const demoEmail = 'sustainability.demo@ecopulse.io';
+    const demoEmail = 'sustainability.demo@TerraTrack.io';
     let user = await User.findOne({ email: demoEmail });
 
     if (!user) {
       user = await User.create({
         name: 'Elena Vance',
         email: demoEmail,
-        password: 'EcoPulseDemoPassword2026!',
+        password: 'TerraTrackDemoPassword2026!',
         organization: 'Verdant Global Technologies',
         role: 'sustainability_lead',
         unitSystem: 'metric',

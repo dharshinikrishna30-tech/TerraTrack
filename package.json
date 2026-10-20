@@ -1,7 +1,7 @@
 {
-  "name": "ecopulse-monorepo",
+  "name": "terratrack-monorepo",
   "version": "1.0.0",
-  "description": "EcoPulse – Track. Measure. Reduce. Environmental Sustainability SaaS Platform",
+  "description": "TerraTrack – Track. Measure. Reduce. Environmental Sustainability SaaS Platform",
   "scripts": {
     "dev": "concurrently -n \"SERVER,CLIENT\" -c \"cyan,green\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
     "start": "npm start --prefix server",
@@ -25,6 +25,6 @@
     "vite",
     "tailwind"
   ],
-  "author": "EcoPulse Team",
+  "author": "TerraTrack Team",
   "license": "MIT"
 }

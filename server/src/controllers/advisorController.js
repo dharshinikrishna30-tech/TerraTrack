@@ -22,7 +22,7 @@ export const getRecommendations = async (req, res, next) => {
           scope3Kg: emissionsData.scope3Kg,
         },
         recommendations,
-        provider: process.env.GEMINI_API_KEY ? 'Gemini 1.5 Pro/Flash' : 'EcoPulse GHG Protocol Rule Engine',
+        provider: process.env.GEMINI_API_KEY ? 'Gemini 1.5 Pro/Flash' : 'TerraTrack GHG Protocol Rule Engine',
       },
     });
   } catch (error) {

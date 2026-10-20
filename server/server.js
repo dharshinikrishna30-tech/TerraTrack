@@ -9,13 +9,13 @@ const startServer = async () => {
 
     app.listen(PORT, () => {
       console.log(`=============================================`);
-      console.log(`🌿 EcoPulse Server running on port ${PORT}`);
+      console.log(`🌿 TerraTrack Server running on port ${PORT}`);
       console.log(`📡 Environment: ${process.env.NODE_ENV || 'development'}`);
       console.log(`🔗 API Base: http://localhost:${PORT}/api`);
       console.log(`=============================================`);
     });
   } catch (error) {
-    console.error('Failed to start EcoPulse server:', error);
+    console.error('Failed to start TerraTrack server:', error);
     process.exit(1);
   }
 };

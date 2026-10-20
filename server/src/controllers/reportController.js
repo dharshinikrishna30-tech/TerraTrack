@@ -89,7 +89,7 @@ export const exportCSV = async (req, res, next) => {
     const csvContent = [headers.join(','), ...rows.map((r) => r.join(','))].join('\n');
 
     res.setHeader('Content-Type', 'text/csv');
-    res.setHeader('Content-Disposition', 'attachment; filename="ecopulse-carbon-report.csv"');
+    res.setHeader('Content-Disposition', 'attachment; filename="TerraTrack-carbon-report.csv"');
     res.status(200).send(csvContent);
   } catch (error) {
     next(error);

@@ -10,7 +10,7 @@ const api = axios.create({
 // Request interceptor: attach Bearer token
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('ecopulse_token');
+    const token = localStorage.getItem('TerraTrack_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -30,8 +30,8 @@ api.interceptors.response.use(
         !window.location.pathname.startsWith('/register') &&
         window.location.pathname !== '/'
       ) {
-        localStorage.removeItem('ecopulse_token');
-        localStorage.removeItem('ecopulse_user');
+        localStorage.removeItem('TerraTrack_token');
+        localStorage.removeItem('TerraTrack_user');
         window.location.href = '/login?expired=true';
       }
     }
@@ -89,7 +89,7 @@ export const reportService = {
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.setAttribute('download', `ecopulse-carbon-report-${new Date().toISOString().slice(0, 10)}.csv`);
+    link.setAttribute('download', `TerraTrack-carbon-report-${new Date().toISOString().slice(0, 10)}.csv`);
     document.body.appendChild(link);
     link.click();
     link.remove();

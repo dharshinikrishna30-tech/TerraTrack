@@ -56,7 +56,7 @@ export const LandingPage = () => {
     setDemoLoading(true);
     try {
       await demoLogin();
-      toast('Welcome to the EcoPulse interactive demo!', 'success');
+      toast('Welcome to the TerraTrack interactive demo!', 'success');
       navigate('/app/dashboard');
     } catch (err) {
       toast('Could not enter demo session, please try again.', 'error');
@@ -220,7 +220,7 @@ export const LandingPage = () => {
             Estimate Your Annual Facility Carbon Footprint
           </h2>
           <p className="text-sm sm:text-base text-slate-400 mt-2 max-w-xl mx-auto">
-            Adjust the sliders below to see your immediate Scope 1 & 2 carbon footprint and the potential savings unlocked by EcoPulse.
+            Adjust the sliders below to see your immediate Scope 1 & 2 carbon footprint and the potential savings unlocked by TerraTrack.
           </p>
         </div>
 
@@ -592,7 +592,7 @@ export const LandingPage = () => {
             Ready to Cut Carbon & Operating Costs?
           </h2>
           <p className="text-sm sm:text-base text-emerald-200/80 mt-4 max-w-xl mx-auto leading-relaxed">
-            Join hundreds of forward-thinking facilities actively decarbonizing with EcoPulse. Instant setup, zero hardware required.
+            Join hundreds of forward-thinking facilities actively decarbonizing with TerraTrack. Instant setup, zero hardware required.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -620,13 +620,13 @@ export const LandingPage = () => {
             <div className="w-7 h-7 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
               <Leaf className="w-4 h-4" />
             </div>
-            <span className="font-extrabold text-white text-sm">EcoPulse</span>
+            <span className="font-extrabold text-white text-sm">TerraTrack</span>
             <span className="text-slate-600">|</span>
             <span>Track. Measure. Reduce.</span>
           </div>
 
           <p className="text-slate-500">
-            © {new Date().getFullYear()} EcoPulse Environmental Technologies Inc. Compliant with GHG Protocol & ISO 14064.
+            © {new Date().getFullYear()} TerraTrack Environmental Technologies Inc. Compliant with GHG Protocol & ISO 14064.
           </p>
 
           <div className="flex items-center gap-5">

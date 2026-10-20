@@ -5,19 +5,19 @@ const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem('ecopulse_token'));
+  const [token, setToken] = useState(localStorage.getItem('TerraTrack_token'));
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const initializeAuth = async () => {
-      const storedToken = localStorage.getItem('ecopulse_token');
+      const storedToken = localStorage.getItem('TerraTrack_token');
       if (storedToken) {
         try {
           const res = await authService.getMe();
           setUser(res.data.user);
         } catch (err) {
           console.error('Session restoration failed:', err.message);
-          localStorage.removeItem('ecopulse_token');
+          localStorage.removeItem('TerraTrack_token');
           setToken(null);
           setUser(null);
         }
@@ -30,7 +30,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     const res = await authService.login({ email, password });
-    localStorage.setItem('ecopulse_token', res.data.token);
+    localStorage.setItem('TerraTrack_token', res.data.token);
     setToken(res.data.token);
     setUser(res.data.user);
     return res.data.user;
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
   const demoLogin = async () => {
     const res = await authService.demoLogin();
-    localStorage.setItem('ecopulse_token', res.data.token);
+    localStorage.setItem('TerraTrack_token', res.data.token);
     setToken(res.data.token);
     setUser(res.data.user);
     return res.data.user;
@@ -46,14 +46,14 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (userData) => {
     const res = await authService.register(userData);
-    localStorage.setItem('ecopulse_token', res.data.token);
+    localStorage.setItem('TerraTrack_token', res.data.token);
     setToken(res.data.token);
     setUser(res.data.user);
     return res.data.user;
   };
 
   const logout = () => {
-    localStorage.removeItem('ecopulse_token');
+    localStorage.removeItem('TerraTrack_token');
     setToken(null);
     setUser(null);
   };

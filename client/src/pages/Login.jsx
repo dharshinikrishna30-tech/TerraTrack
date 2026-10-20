@@ -40,7 +40,7 @@ export const Login = () => {
     setDemoLoading(true);
     try {
       await demoLogin();
-      toast('Welcome to the pre-loaded EcoPulse demo account!', 'success');
+      toast('Welcome to the pre-loaded TerraTrack demo account!', 'success');
       navigate('/app/dashboard');
     } catch (err) {
       toast('Failed to load demo account. Please try again.', 'error');
@@ -78,7 +78,7 @@ export const Login = () => {
             </div>
           </Link>
 
-          <h1 className="text-2xl font-bold text-white tracking-tight">Sign In to EcoPulse</h1>
+          <h1 className="text-2xl font-bold text-white tracking-tight">Sign In to TerraTrack</h1>
           <p className="text-xs text-slate-400 mt-1">
             Access your facility dashboard and sustainability intelligence
           </p>
